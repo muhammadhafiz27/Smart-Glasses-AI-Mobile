@@ -171,7 +171,7 @@ class _ScanHeader extends StatelessWidget {
 }
 
 // ─────────────────────────────────────────────────────────────
-// CAMERA CARD
+// CAMERA CARD — pakai rasio asli kamera, bukan hardcoded
 // ─────────────────────────────────────────────────────────────
 
 class _CameraCard extends StatelessWidget {
@@ -180,6 +180,15 @@ class _CameraCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final camCtrl = ctrl.cameraController!;
+    final previewSize = camCtrl.value.previewSize;
+
+    // previewSize: lebar x tinggi dalam orientasi landscape sensor
+    // Di portrait, width dan height perlu di-swap
+    final double aspectRatio = previewSize != null
+        ? previewSize.height / previewSize.width
+        : 4 / 3;
+
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(maxWidth: 400),
@@ -190,13 +199,13 @@ class _CameraCard extends StatelessWidget {
         ],
       ),
       child: AspectRatio(
-        aspectRatio: 3 / 4,
+        aspectRatio: aspectRatio,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(32),
           child: Stack(
             fit: StackFit.expand,
             children: [
-              CameraPreview(ctrl.cameraController!),
+              CameraPreview(camCtrl),
               Container(color: Colors.black.withValues(alpha: 0.15)),
               const _GridOverlay(),
               _ScanFrame(ctrl: ctrl),
@@ -273,7 +282,7 @@ class _ScanFrame extends StatelessWidget {
 }
 
 // ─────────────────────────────────────────────────────────────
-// SCAN CORNER — CC turun dari 17 → 4
+// SCAN CORNER
 // ─────────────────────────────────────────────────────────────
 
 class _ScanCorner extends StatelessWidget {

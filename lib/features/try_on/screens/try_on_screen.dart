@@ -200,7 +200,7 @@ class _TryOnScreenState extends State<TryOnScreen>
         fit: StackFit.expand,
         children: [
           _CameraLayer(isCameraReady: _isCameraReady, controller: _cameraController),
-          Container(color: Colors.black.withOpacity(0.15)),
+          Container(color: Colors.black.withValues(alpha: 0.15)),
           if (_detectedFace != null && _isCameraReady)
             ..._buildGlassesPositioned(screenSize, frameName),
           const _TopBar(),
@@ -324,7 +324,7 @@ class _ArBadge extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.black54,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppTheme.accent.withOpacity(0.5)),
+            border: Border.all(color: AppTheme.accent.withValues(alpha: 0.5)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -437,10 +437,10 @@ class _FrameSelector extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 6),
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
               decoration: BoxDecoration(
-                color: isSelected ? AppTheme.primary : Colors.white.withOpacity(0.1),
+                color: isSelected ? AppTheme.primary : Colors.white.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: isSelected ? AppTheme.primary : Colors.white.withOpacity(0.2),
+                  color: isSelected ? AppTheme.primary : Colors.white.withValues(alpha: 0.2),
                 ),
               ),
               child: Text(

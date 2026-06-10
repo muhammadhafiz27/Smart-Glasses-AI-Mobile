@@ -71,7 +71,7 @@ class _LifestyleHeader extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.15),
+                color: Colors.white.withValues(alpha: 0.15),
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.arrow_back_rounded, color: Colors.white),
@@ -166,14 +166,14 @@ class _ActivityItem extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 16),
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
-          color: selected ? AppTheme.primary.withOpacity(0.08) : Colors.white,
+          color: selected ? AppTheme.primary.withValues(alpha: 0.08) : Colors.white,
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
             color: selected ? AppTheme.primary : Colors.grey.shade200,
             width: 2,
           ),
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 12, offset: const Offset(0, 4)),
+            BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 12, offset: const Offset(0, 4)),
           ],
         ),
         child: Row(
@@ -262,7 +262,7 @@ class _OutdoorToggle extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 12, offset: const Offset(0, 4)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 12, offset: const Offset(0, 4)),
         ],
       ),
       child: Row(
@@ -320,7 +320,7 @@ class _ScreenTimeCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(32),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 6)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 6)),
         ],
       ),
       child: Column(
@@ -377,7 +377,7 @@ class _ScreenTimeSlider extends StatelessWidget {
             activeTrackColor:   AppTheme.primary,
             inactiveTrackColor: Colors.grey.shade200,
             thumbColor:         AppTheme.primary,
-            overlayColor:       AppTheme.primary.withOpacity(0.1),
+            overlayColor:       AppTheme.primary.withValues(alpha: 0.1),
             trackHeight:        5,
           ),
           child: Slider(
@@ -414,7 +414,7 @@ class _ActivitySummary extends StatelessWidget {
       padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [AppTheme.primary.withOpacity(0.1), AppTheme.accent.withOpacity(0.1)],
+          colors: [AppTheme.primary.withValues(alpha: 0.1), AppTheme.accent.withValues(alpha: 0.1)],
         ),
         borderRadius: BorderRadius.circular(24),
       ),
@@ -457,7 +457,7 @@ class _ContinueButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.primary.withOpacity(enabled ? 0.35 : 0.15),
+                color: AppTheme.primary.withValues(alpha: enabled ? 0.35 : 0.15),
                 blurRadius: 18,
                 offset: const Offset(0, 8),
               ),

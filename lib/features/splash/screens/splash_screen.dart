@@ -93,9 +93,9 @@ class _LogoCircle extends StatelessWidget {
       width: 100,
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.15),
+        color: Colors.white.withValues(alpha: 0.15),
         shape: BoxShape.circle,
-        border: Border.all(color: Colors.white.withOpacity(0.4), width: 2),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.4), width: 2),
       ),
       child: const Icon(Icons.visibility_rounded, size: 52, color: Colors.white),
     );
@@ -143,7 +143,7 @@ class _AppSubtitle extends StatelessWidget {
       'AI-powered eyewear personalization',
       style: TextStyle(
         fontSize: 14,
-        color: Colors.white.withOpacity(0.75),
+        color: Colors.white.withValues(alpha: 0.75),
         letterSpacing: 0.3,
       ),
     );
@@ -195,7 +195,7 @@ class _LoadingDotsState extends State<_LoadingDots>
             width: 8,
             height: 8 + _dotControllers[i].value * 8,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.5 + _dotControllers[i].value * 0.5),
+              color: Colors.white.withValues(alpha: 0.5 + _dotControllers[i].value * 0.5),
               borderRadius: BorderRadius.circular(4),
             ),
           ),

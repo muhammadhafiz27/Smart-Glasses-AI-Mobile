@@ -149,7 +149,7 @@ class _ScanHeader extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.15),
+                color: Colors.white.withValues(alpha: 0.15),
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.arrow_back_rounded, color: Colors.white),
@@ -197,7 +197,7 @@ class _CameraCard extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               CameraPreview(ctrl.cameraController!),
-              Container(color: Colors.black.withOpacity(0.15)),
+              Container(color: Colors.black.withValues(alpha: 0.15)),
               const _GridOverlay(),
               _ScanFrame(ctrl: ctrl),
               const _CameraStatusBadge(),
@@ -336,7 +336,7 @@ class _ScanLine extends StatelessWidget {
               color: AppTheme.accent,
               boxShadow: [
                 BoxShadow(
-                  color: AppTheme.accent.withOpacity(0.7),
+                  color: AppTheme.accent.withValues(alpha: 0.7),
                   blurRadius: 12,
                 ),
               ],
@@ -363,7 +363,7 @@ class _CameraStatusBadge extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.45),
+          color: Colors.black.withValues(alpha: 0.45),
           borderRadius: BorderRadius.circular(40),
         ),
         child: Row(
@@ -410,7 +410,7 @@ class _ScanInfo extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.primary.withOpacity(0.25),
+                color: AppTheme.primary.withValues(alpha: 0.25),
                 blurRadius: 20,
               ),
             ],
@@ -469,7 +469,7 @@ class _ScanButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(100),
           boxShadow: [
             BoxShadow(
-              color: AppTheme.primary.withOpacity(0.35),
+              color: AppTheme.primary.withValues(alpha: 0.35),
               blurRadius: 20,
               offset: const Offset(0, 8),
             ),

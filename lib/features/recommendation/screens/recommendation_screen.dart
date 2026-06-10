@@ -132,7 +132,7 @@ class _RecommendationHeader extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             'AI-powered recommendations just for you',
-            style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 14),
+            style: TextStyle(color: Colors.white.withValues(alpha: 0.85), fontSize: 14),
           ),
         ],
       ),
@@ -155,7 +155,7 @@ class _SummaryCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 20, offset: const Offset(0, 6)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 20, offset: const Offset(0, 6)),
         ],
       ),
       child: Row(
@@ -182,7 +182,7 @@ class _SummaryChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
+        color: color.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(18),
       ),
       child: Column(
@@ -236,8 +236,8 @@ class _FramePreviewBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
           colors: [
-            const Color(0xFF4F6DFF).withOpacity(0.12),
-            const Color(0xFF00C9A7).withOpacity(0.12),
+            const Color(0xFF4F6DFF).withValues(alpha: 0.12),
+            const Color(0xFF00C9A7).withValues(alpha: 0.12),
           ],
         ),
       ),
@@ -352,7 +352,7 @@ class _GlassSection extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 4)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 4)),
         ],
       ),
       child: Column(
@@ -447,7 +447,7 @@ class _FrameMatchBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: const Color(0xFF00C9A7).withOpacity(0.12),
+        color: const Color(0xFF00C9A7).withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Text(
@@ -470,7 +470,7 @@ class _LensItem extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 14),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF00C9A7).withOpacity(0.06),
+        color: const Color(0xFF00C9A7).withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(18),
       ),
       child: Row(

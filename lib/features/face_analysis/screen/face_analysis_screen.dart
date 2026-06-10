@@ -39,7 +39,7 @@ class FaceAnalysisScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(32),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.08),
+                    color: Colors.black.withValues(alpha: 0.08),
                     blurRadius: 24,
                     offset: const Offset(0, 10),
                   ),
@@ -80,7 +80,7 @@ class _SuccessIcon extends StatelessWidget {
         ),
         shape: BoxShape.circle,
         boxShadow: [
-          BoxShadow(color: AppTheme.accent.withOpacity(0.35), blurRadius: 20),
+          BoxShadow(color: AppTheme.accent.withValues(alpha: 0.35), blurRadius: 20),
         ],
       ),
       child: const Icon(Icons.check_circle, size: 72, color: Colors.white),
@@ -119,8 +119,8 @@ class _ResultCard extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            AppTheme.primary.withOpacity(0.10),
-            AppTheme.accent.withOpacity(0.10),
+            AppTheme.primary.withValues(alpha: 0.10),
+            AppTheme.accent.withValues(alpha: 0.10),
           ],
         ),
         borderRadius: BorderRadius.circular(24),

@@ -1,8 +1,6 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:camera/camera.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:path/path.dart' as path;
 
 import '../../../ai/services/tflite_service.dart';
 import '../../../models/face_shape_result.dart';

@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import '../../core/constants/recommendation_rules.dart';
 import '../../models/lifestyle_data.dart';

@@ -8,7 +8,7 @@ import '../../../models/recommendation_models.dart';
 class RecommendationController extends ChangeNotifier {
   final RecommendationService _service;
   PersonalizationResult? _result;
-  bool _isBuilding = false;
+  final bool _isBuilding = false;
 
   RecommendationController(this._service);
 

@@ -138,5 +138,5 @@ Program Studi Informatika — Universitas Andalas
 ---
 
 <div align="center">
-  <sub>© 2025 Smart Glasses AI — Universitas Andalas</sub>
+  <sub>© 2026 Smart Glasses AI — Universitas Andalas</sub>
 </div>
